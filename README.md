@@ -4,6 +4,7 @@ This is a fork of [jczaplew/geojson-precision][https://github.com/jczaplew/geojs
 
 ## What does this plugin do?
 Removes unnecessary precision from different types of GeoJSON object. Remember the following table to decide on what precision to use for your projects.
+
 decimal
 places   degrees          distance
 -------  -------          --------
@@ -41,9 +42,9 @@ npm install [-g] geojson-mend
 ##### Example use:
 
 ````
-var gp = require("geojson-precision");
+var geomend = require("geojson-mend");
 
-var trimmed = gp.parse({
+var trimmed = geomend.parse({
         "type": "Point",
         "coordinates": [
           18.984375,
@@ -68,12 +69,13 @@ var trimmed = gp.parse({
  ````.parse()```` can also be used directly, for example:
  
  ````
-var gp = require("geojson-precision");
+var geomend = require("geojson-precision");
 
-var trimmed = gp({ ... }, 3);
+var trimmed = geomend({ ... }, 3);
 
 ````
 
 
 ## License
 CC0
+Original author: [jczaplew/geojson-precision][https://github.com/jczaplew/geojson-precision]
