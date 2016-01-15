@@ -3,9 +3,8 @@
   function parse(t, precision) {
 
     function point(p) {
-      console.log(p);
       return p.map(function(e) {
-        return 1 * e.toFixed(precision);
+        return 1 * parseFloat(e).toFixed(precision);
       });
     }
 
