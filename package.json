@@ -1,23 +1,30 @@
 {
-    "name": "geojson-mend",
-    "version": "0.1.0",
-    "description": "Mend your GeoJSON by removing meaningless precision.",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/deathg0d/geojson-mend.git"
-    },
-    "keywords": [
-        "geojson",
-        "precision",
-        "simplify",
-        "simplify geojson",
-        "cleanup geojson"
-    ],
-    "author": "deathg0d",
-    "license": "CC0",
-    "bugs": {
-        "url": "https://github.com/deathg0d/geojson-mend/issues"
-    },
-    "homepage": "https://github.com/deathg0d/geojson-mend"
+  "name": "geojson-mend",
+  "version": "0.1.1",
+  "description": "Mend your GeoJSON by removing meaningless precision.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deathg0d/geojson-mend.git"
+  },
+  "keywords": [
+    "geojson",
+    "precision",
+    "simplify",
+    "simplify geojson",
+    "cleanup geojson"
+  ],
+  "author": "deathg0d <developer.naya@gmail.com>",
+  "license": "CC0",
+  "bugs": {
+    "url": "https://github.com/deathg0d/geojson-mend/issues"
+  },
+  "homepage": "https://github.com/deathg0d/geojson-mend",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "geojson-validation": "^0.1.6",
+    "simplify-geometry": "0.0.2"
+  }
 }
