@@ -25,6 +25,7 @@ Add features to simplify GeoJSON Object. Not always you need an extremely detail
 
 
 ## Install
+
 ````
 npm install [-g] geojson-mend
 ````
@@ -45,17 +46,17 @@ npm install [-g] geojson-mend
 ````
 var geomend = require("geojson-mend");
 
-var trimmed = geomend.parse({
+var isMended = geomend.parse({
         "type": "Point",
         "coordinates": [
-          18.984375,
+          "18.984375",
           57.32652122521709
         ]
       }, 3);
 
 ````
 
-````trimmed```` will now look like this:
+````isMended```` will now look like this:
 
 ````
 {
@@ -72,7 +73,7 @@ var trimmed = geomend.parse({
  ````
 var geomend = require("geojson-precision");
 
-var trimmed = geomend({ ... }, 3);
+var isMended = geomend({ ... }, 3);
 
 ````
 
