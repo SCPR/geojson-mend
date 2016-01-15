@@ -45,7 +45,6 @@ npm install [-g] geojson-mend
 
 ````
 var geomend = require("geojson-mend");
-
 var isMended = geomend.parse({
         "type": "Point",
         "coordinates": [
@@ -72,7 +71,6 @@ var isMended = geomend.parse({
  
  ````
 var geomend = require("geojson-precision");
-
 var isMended = geomend({ ... }, 3);
 
 ````
