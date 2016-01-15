@@ -1,4 +1,4 @@
-# geojson-precision
+# geojson-mend
 This is a fork of [jczaplew/geojson-precision](https://github.com/jczaplew/geojson-precision). This fork was created to extend the module to include more features that fulfill our particular needs. Please use [jczaplew](https://github.com/jczaplew)'s module if this isn't the right module for you. 
 
 
@@ -78,4 +78,4 @@ var isMended = geomend({ ... }, 3);
 
 ## License
 CC0
-Original author: [jczaplew/geojson-precision](https://github.com/jczaplew/geojson-precision)
+Original author: [jczaplew](https://github.com/jczaplew)
