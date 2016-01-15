@@ -1,10 +1,11 @@
 # geojson-precision
-This is a fork of [jczaplew/geojson-precision][https://github.com/jczaplew/geojson-precision]. This fork was created to extend the module to include more features that fulfill our particular needs. Please use [jczaplew][https://github.com/jczaplew]'s module if this isn't the right module for you. 
+This is a fork of [jczaplew/geojson-precision](https://github.com/jczaplew/geojson-precision). This fork was created to extend the module to include more features that fulfill our particular needs. Please use [jczaplew](https://github.com/jczaplew)'s module if this isn't the right module for you. 
 
 
 ## What does this plugin do?
 Removes unnecessary precision from different types of GeoJSON object. Remember the following table to decide on what precision to use for your projects.
 
+````
 decimal
 places   degrees          distance
 -------  -------          --------
@@ -17,7 +18,7 @@ places   degrees          distance
 6        0.000001         11.1 cm
 7        0.0000001        1.11 cm
 8        0.00000001       1.11 mm
-
+````
 
 ## Future plans
 Add features to simplify GeoJSON Object. Not always you need an extremely detailed map. Sometimes it is a lot more efficient to just reduce your geo geometry.
@@ -78,4 +79,4 @@ var trimmed = geomend({ ... }, 3);
 
 ## License
 CC0
-Original author: [jczaplew/geojson-precision][https://github.com/jczaplew/geojson-precision]
+Original author: [jczaplew/geojson-precision](https://github.com/jczaplew/geojson-precision)
