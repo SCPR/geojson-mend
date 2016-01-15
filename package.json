@@ -1,35 +1,23 @@
 {
-  "name": "geojson-precision",
-  "version": "0.4.0",
-  "description": "Remove meaningless precision from GeoJSON",
-  "main": "index.js",
-  "dependencies": {
-    "commander": "^2.4.0"
-  },
-  "devDependencies": {
-    "assert": "^1.1.2",
-    "geojsonhint": "^0.3.4",
-    "should": "^4.0.4"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "bin": {
-    "geojson-precision": "./bin/geojson-precision"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jczaplew/geojson-precision.git"
-  },
-  "keywords": [
-    "geojson",
-    "precision",
-    "geojson precision"
-  ],
-  "author": "John J Czaplewski <jczaplew@gmail.com>",
-  "license": "CC0",
-  "bugs": {
-    "url": "https://github.com/jczaplew/geojson-precision/issues"
-  },
-  "homepage": "https://github.com/jczaplew/geojson-precision"
+    "name": "geojson-mend",
+    "version": "0.1.0",
+    "description": "Mend your GeoJSON by removing meaningless precision.",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/deathg0d/geojson-mend.git"
+    },
+    "keywords": [
+        "geojson",
+        "precision",
+        "simplify",
+        "simplify geojson",
+        "cleanup geojson"
+    ],
+    "author": "deathg0d",
+    "license": "CC0",
+    "bugs": {
+        "url": "https://github.com/deathg0d/geojson-mend/issues"
+    },
+    "homepage": "https://github.com/deathg0d/geojson-mend"
 }

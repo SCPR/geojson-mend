@@ -1,10 +1,30 @@
 # geojson-precision
-Remove meaningless precision from your GeoJSON. If your coordinates go out to 7+ digits, you are [probably misrepresenting your data](http://gis.stackexchange.com/a/8674/14196). Most scenarios in which GeoJSON is useful (i.e. web-related applications) do not require survey-grade precision, and a higher value is placed on a compact file size. Trimming the precision of coordinates can greatly reduce file size, while removing the appearance of fake high precision.
+This is a fork of [jczaplew/geojson-precision][https://github.com/jczaplew/geojson-precision]. This fork was created to extend the module to include more features that fulfill our particular needs. Please use [jczaplew][https://github.com/jczaplew]'s module if this isn't the right module for you. 
+
+
+## What does this plugin do?
+Removes unnecessary precision from different types of GeoJSON object. Remember the following table to decide on what precision to use for your projects.
+decimal
+places   degrees          distance
+-------  -------          --------
+0        1                111  km
+1        0.1              11.1 km
+2        0.01             1.11 km
+3        0.001            111  m
+4        0.0001           11.1 m
+5        0.00001          1.11 m
+6        0.000001         11.1 cm
+7        0.0000001        1.11 cm
+8        0.00000001       1.11 mm
+
+
+## Future plans
+Add features to simplify GeoJSON Object. Not always you need an extremely detailed map. Sometimes it is a lot more efficient to just reduce your geo geometry.
 
 
 ## Install
 ````
-npm install [-g] geojson-precision
+npm install [-g] geojson-mend
 ````
 
 
@@ -13,7 +33,7 @@ npm install [-g] geojson-precision
 
 ###.parse(*geojson*, *precision*)
 
-````geojson```` is a valid GeoJSON object, and can be of type ````Point````, ````LineString````, ````Polygon````, ````MultiPoint````, ````MultiPolygon````, ````MultiLineString````, ````GeometryCollection````, ````Feature````, or ````FeatureCollection````. If you are unsure whether or not your GeoJSON object is valid, you can run it through a linter such as [geojsonhint](https://github.com/mapbox/geojsonhint).
+````geojson```` is a valid GeoJSON object, and can be of type ````Point````, ````LineString````, ````Polygon````, ````MultiPoint````, ````MultiPolygon````, ````MultiLineString````, ````GeometryCollection````, ````Feature````, or ````FeatureCollection````.
 
 ````precision```` is a positive integer. If your specified ````precision```` value is greater than the precision of the input geometry, the output precision will be the same as the input. For example, if your input coordinates are ````[10.0, 20.0]````, and you specify a ````precision```` of ````5````, the output will be the same as the input. 
 
@@ -53,34 +73,6 @@ var gp = require("geojson-precision");
 var trimmed = gp({ ... }, 3);
 
 ````
-
-
-## CLI
-Geojson-precision can also be used via the command line. Especially easy to use if installed globally (using ````-g````).
-
-###Parameters
-######  precision (-p)
-A positive integer specifying coordinate precision
-
-###### input
-An input GeoJSON file
-
-###### output
-An output GeoJSON file
-
-##### Example use
-````
-geojson-precision -p 4 input.json output.json
-````
-
-
-
-
-## Inspiration
-Concepts, ideas, etc borrowed to various degrees from:
-
-  - [wellknown](https://github.com/mapbox/wellknown/pull/18) 
-  - [LilJSON](https://github.com/migurski/LilJSON)
 
 
 ## License
