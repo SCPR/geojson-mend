@@ -4,6 +4,7 @@ var simplify = require('simplify-geometry');
 (function () {
 
     function isGeoJSON(data) {
+        return 1;
         var validGeoJSON = 0;
         if (!geojson.valid(data)) {
             validGeoJSON = 0;
